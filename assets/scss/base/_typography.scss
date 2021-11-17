@@ -1,0 +1,76 @@
+body {
+    @include fontsize(16px);
+    color: $grey-2;
+    line-height: 1.65;
+    overflow-x: hidden;
+    position: relative;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+// h1,
+// .h1 {}
+h2,
+.h2 {
+    @include fontsize(24px);
+    color: red;
+}
+
+h3,
+.h3 {
+    @include fontsize(24px);
+    line-height: 1.33;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h4,
+.h4 {
+    @include fontsize(24px);
+    line-height: 1.33;
+    font-weight: 700;
+}
+
+h5,
+.h5 {
+    @include fontsize(20px);
+    line-height: 1.33;
+    font-weight: 700;
+}
+
+h6,
+.h6 {
+    @include fontsize(16px);
+    line-height: 1.31;
+    font-weight: 700;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    &:hover,
+    &:active {
+        text-decoration: underline;
+    }
+}
+
+p {
+    margin-bottom: 1rem;
+    color: $black;
+    line-height: 1.65;
+    max-width: 900px;
+    &.large {
+        @include fontsize(18px);
+        font-weight: 100;
+        @media screen and (min-width: $break-desktopSmall) {
+            @include fontsize(26px);
+        }
+    }
+}
