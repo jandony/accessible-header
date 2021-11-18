@@ -9,27 +9,50 @@
 </head>
 
 <body>
-    <header id="site-header" class="site-header dynamic-header" role="banner">
-        <nav id="site-navigation" role="navigation" aria-label="Top Menu">
-            <ul id="top-menu">
-                <li><a href="#">Home</a></li>
-                <li class="has-children">
-                    <button class="dropdown-toggle" aria-expanded="false">Dropdown</button>
-                    <ul class="sub-menu dropdown-level-1">
-                        <li><a href="#">One</a></li>
-                        <li><a href="#">Two</a></li>
-                        <li><a href="#">Three</a></li>
-                        <li><a href="#">Four</a></li>
-                        <li class="last-child">
-                            <a href="#">Five</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">Mega Menu</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+    <header id="site-header" class="site-header dynamic-header">
+        <div class="header-inner">
+            <div class="site-branding" role="banner">
+                <h1 class="site-title">AccessibleHeader</h1>
+                <p class="site-description">designed by JA</p>
+            </div>
+            <nav id="site-navigation" role="navigation" aria-label="Top Menu">
+                <ul id="top-menu" role="menu">
+                    <li>
+                        <a href="#" role="menuitem">Home</a>
+                    </li>
+                    <li class="has-children">
+                        <button class="dropdown-toggle" aria-expanded="false" role="menuitem">Dropdown</button>
+                        <ul class="sub-menu dropdown-level-1">
+                            <li>
+                                <a href="#" role="menuitem">One</a>
+                            </li>
+                            <li>
+                                <a href="#" role="menuitem">Two</a>
+                            </li>
+                            <li>
+                                <a href="#" role="menuitem">Three</a>
+                            </li>
+                            <li>
+                                <a href="#" role="menuitem">Four</a>
+                            </li>
+                            <li class="last-child">
+                                <a href="#" role="menuitem">Five</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" role="menuitem">Mega Menu</a>
+                    </li>
+                    <li>
+                        <a href="#" role="menuitem">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#" role="menuitem">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="overlay"></div>
     </header>
     <main>
         Main content

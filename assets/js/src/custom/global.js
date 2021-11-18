@@ -10,6 +10,7 @@ $(() => {
         }
     });
     // Header - variables
+    const pageOverlay = $(".overlay");
     const hasChildren = $("li.has-children");
     const lastChild = $("li.last-child");
     const dropdownToggle = $("button.dropdown-toggle");
@@ -17,9 +18,18 @@ $(() => {
     // Header - dropdowns
     hasChildren.click(() => {
         if (dropdownToggle.attr("aria-expanded") == "false") {
+            pageOverlay.fadeIn();
             dropdownToggle.attr("aria-expanded", "true");
             dropdownLvl1.css("display", "block");
         } else {
+            pageOverlay.fadeOut();
+            dropdownToggle.attr("aria-expanded", "false");
+            dropdownLvl1.css("display", "none");
+        }
+    });
+    pageOverlay.click(() => {
+        pageOverlay.fadeOut();
+        if (dropdownToggle.attr("aria-expanded") == "true") {
             dropdownToggle.attr("aria-expanded", "false");
             dropdownLvl1.css("display", "none");
         }
@@ -31,6 +41,7 @@ $(() => {
     //     }
     // });
     lastChild.focusout(() => {
+        pageOverlay.fadeOut();
         dropdownToggle.attr("aria-expanded", "false");
         dropdownLvl1.css("display", "none");
     });
