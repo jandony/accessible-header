@@ -5,11 +5,31 @@
     <meta http-equiv="X-UA-Compatible" charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
     <title>Accessible Header</title>
     <link href="./assets/css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
-        Header
+    <header id="site-header" class="site-header dynamic-header" role="banner">
+        <nav id="site-navigation" role="navigation" aria-label="Top Menu">
+            <ul id="top-menu">
+                <li><a href="#">Home</a></li>
+                <li class="has-children">
+                    <button class="dropdown-toggle" aria-expanded="false">Dropdown</button>
+                    <ul class="sub-menu dropdown-level-1">
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                        <li><a href="#">Four</a></li>
+                        <li class="last-child">
+                            <a href="#">Five</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Mega Menu</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         Main content
