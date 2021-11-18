@@ -22,7 +22,6 @@
         "gulp-file-include": "2.3.0"
     },
     "scripts": {
-        "postinstall": "node ./npm/postinstall.js",
         "start": "gulp",
         "no_browser_sync": "gulp --no_browser_sync",
         "build-prod": "gulp build --production",
